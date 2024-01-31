@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordious Agency</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- swipper js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- phospor icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- bootsrsap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- *******  Owl Carousel Links  ******* -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+  
+  
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    .navbar-nav .nav-link {
+    color: #000000; /* Warna teks */
+    }
+
+    .navbar-nav .nav-item:hover .nav-link {
+      color: skyblue; /* Warna teks saat dihover */
+    }
+
+    .navbar-brand {
+      font-weight: bold; /* Membuat teks judul tebal */
+      transition: transform 0.5s ease; /* Efek animasi naik */
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      font-weight: bold; /* Membuat teks tebal */
+    }
+
+    /* Efek animasi naik saat hover */
+    .navbar-nav .nav-item:hover .nav-link {
+      transform: translateY(-5px); /* Naik 5 piksel saat hover */
+    }
+
+    /* Menetapkan gambar latar belakang untuk container */
+    .container-bg {
+      background-image: url('asset/background3.png'); /* Ganti path dengan path file gambar container Anda */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff; /* Warna teks pada gambar latar belakang container */
+      padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+    }
+
+    .container-bg p {
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: skyblue;
+    }
+
+    .container-bg span {
+      color: skyblue;
+    }
+
+    .container-bg h1 {
+      font-weight: 700;
+    }
+
+    .container-bg .text p {
+      font-size: 15px;
+      font-weight: normal;
+      color: #ffffff;
+      letter-spacing: normal;
+      padding-top: 7px;
+    }
+
+    hr {
+      height: 4px; /* Mengatur tinggi garis */
+      background-color: skyblue; /* Mengatur warna garis */
+      border: none; /* Menghapus border garis (opsional) */
+      width: 100px;
+    }
+
+    
+    .container1 {
+      display: flex;
+    }
+
+    .box1 {
+        width: 50%;
+        height: 500px;
+        background-color: black;
+        margin-right: 10px; /* Memberikan jarak antar kotak */
+    }
+
+    .box:last-child {
+        margin-right: 0; /* Menghapus margin kanan pada kotak terakhir */
+    }
+
+    .box1:hover {
+      border: skyblue;
+    }
+
+    .container-fluid_container2 {
+      background-color: #0B0D12;
+      color: #ffffff; /* Warna teks pada gambar latar belakang container */
+      padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+    }
+
+    .flex-container {
+      display: flex;
+    }
+    
+    .flex-box {
+      width: 50%;
+      height: 300px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    i {
+      font-size: 50px;
+    }
+
+    .container-fluid_container3 {
+      background-color: black ;
+      color: #ffffff; /* Warna teks pada gambar latar belakang container */
+      padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+    }
+
+    :root {
+      font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+    }
+
+    .slide {
+        height: 80vh;
+        border-radius: 20px;
+        margin: 10px;
+        cursor: pointer;
+        color: black;
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        transition: all 0.7s ease-in-out;
+        filter: blur(4px);
+    }
+
+    .slide h3 {
+        position: absolute;
+        font-size: clamp(1rem, 5vw, 5rem);
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        opacity: 0;
+        background-color: black;
+        background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: black;
+    }
+
+    .slide.active {
+        flex: 10;
+        filter: blur(0px);
+    }
+
+    .slide.active h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+    }
+
+    /* responsive */
+
+    @media screen and (max-width: 50rem) {
+
+        .container {
+            display: flex;
+            height: 90vh;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .slide {
+            width: 90vw;
+            /* border-radius: 20px; */
+            margin: 10px;
+        }
+
+    }
+
+    .box1:hover {
+      border: 2px solid skyblue; /* Ketebalan 2px, jenis solid, warna #333 */
+    }
+
+    .container-fluid_container4 {
+      padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+      background-color: black;
+      color: #ffffff;
+      /* margin-bottom: 200px; */
+    }
+
+    .vertical-line {
+    width: 2px; /* Lebar garis */
+    height: 100px; /* Tinggi garis */
+    background-color: skyblue; /* Warna garis, sesuaikan kebutuhan */
+    padding-right: 3px;
+    margin-right: 13px;
+    }
+
+    .flex-box:hover {
+      transform: translateZ(10px);
+    }
+
+    .image-grid {
+	--gap: 16px;
+	--num-cols: 3;
+	--row-height: 300px;
+
+	box-sizing: border-box;
+	padding: var(--gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
+}
+
+.image-grid>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-grid-col-2 {
+	grid-column: span 2;
+}
+
+.image-grid-row-2 {
+	grid-row: span 2;
+}
+
+*{
+	/* Variables for storing colors */
+	--card-clr: #161922;
+	--body-clr: #191d28;
+	--primary-clr: #f0bf6a;
+	--heading-clr: #dadada;
+	--text-clr: #767a86;
+}
+
+.testimonials-section{
+	width: 100%;
+	padding: 0px 8%;
+}
+.testimonials-section .section-header{
+	max-width: 700px;
+	text-align: center;
+	margin: 30px auto 40px;
+}
+.section-header h1{
+	position: relative;
+	font-size: 36px;
+	color: var(--primary-clr);
+}
+.testimonials-container{
+	position: relative;
+}
+.testimonials-container .testimonial-card{
+	padding: 20px;
+}
+.testimonial-card .test-card-body{
+	background-color: var(--card-clr);
+	box-shadow: 2px 2px 20px rgba(0,0,0,0.12);
+	padding: 20px;
+}
+.test-card-body .quote{
+	display: flex;
+	align-items: center;
+}
+.test-card-body .quote i{
+	font-size: 45px;
+	color: var(--heading-clr);
+	margin-right: 20px;
+}
+.test-card-body .quote h2{
+	color: var(--heading-clr);
+}
+.test-card-body p{
+	margin: 10px 0px 15px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--text-clr);
+}
+.test-card-body .ratings{
+	margin-top: 20px;
+}
+.test-card-body .ratings i{
+	font-size: 17px;
+	color: var(--primary-clr);
+	cursor: pointer;
+}
+.testimonial-card .profile{
+	display: flex;
+	align-items: center;
+	margin-top: 25px;
+}
+.profile .profile-image{
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 15px;
+}
+.profile .profile-image img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.profile .profile-desc{
+	display: flex;
+	flex-direction: column;
+}
+.profile-desc span:nth-child(1){
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--primary-clr);
+}
+.profile-desc span:nth-child(2){
+	font-size: 15px;
+	color: var(--text-clr);
+}
+.owl-nav{
+	position: absolute;
+	right: 20px;
+	bottom: -10px;
+}
+.owl-nav button{
+	border-radius: 50% !important;
+}
+.owl-nav .owl-prev i,
+.owl-nav .owl-next i{
+	padding: 10px !important;
+	border-radius: 50%;
+	font-size: 18px !important;
+	background-color: var(--card-clr) !important;
+	color: var(--primary-clr);
+	cursor: pointer;
+	transition: 0.4s;
+}
+.owl-nav .owl-prev i:hover,
+.owl-nav .owl-next i:hover{
+	background-color: var(--primary-clr) !important;
+	color: #e9e9e9;
+}
+.owl-dots{
+	margin-top: 15px;
+}
+.owl-dots .owl-dot span{
+	background-color: #434753 !important;
+	padding: 6px !important;
+}
+.owl-dot.active span{
+	background-color: var(--primary-clr) !important;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+.blog-box {
+  width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  margin: 20px;
+}
+
+.blog-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: skyblue;
+  font-size: 0.9rem; 
+}
+
+.contact {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.box {
+    width: 200px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #FFE382;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact .map {
+    box-sizing: border-box;
+    width: 48%; /* Sesuaikan dengan kebutuhan desain Anda */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style tambahan jika diperlukan */
+@media screen and (max-width: 768px) {
+    .contact, .map {
+      width: 100%;
+    }
+}
+
+/* .contact .slider-container .slider .card {
+    width: 350px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #FFE382;
+    justify-content: space-between;
+  } */
+
+  .container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer-col i {
+  font-size: 20px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 " style="height: 15%;">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#"><span class="fw-bold text-light"> <img src="asset/Untitled design.png" style="width: 10%;"> Acourdious Agency </span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 14px;">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold ">
+            <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Service">Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="#works">works</a></li>
+            <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+  </nav> 
+
+  <div class="container-fluid container-bg" id="Home">
+    <!-- Konten Anda akan ditempatkan di sini -->
+    <p>Acourdious</p>
+    <h1>KITA ADALAH <br> AGENCY <span>CREATIVE</span> <br> DALAM BIDANG IT</h1>
+
+    <hr>
+
+    <div class="text">
+      <p>Kita adalah agensi kreatif yang berfokus di bidang teknologi informasi (IT). <br>  Kami menyediakan solusi kreatif dan inovatif untuk memenuhi kebutuhan bisnis Anda. <br> Dengan keahlian dalam desain, pengembangan, dan strategi IT,<br> kami bertujuan membantu klien mencapai tujuan mereka <br> melalui pendekatan yang unik dan berorientasi pada teknologi.</p>
+      <p>Acourdious Solusi inovatif untuk kebutuhan bisnis Anda.</p>
+    </div>
+  </div>
+
+  <div class="container-fluid_container-1 text-left pt-9 mb-7" style="background-color: black; padding: 100px; color: #ffffff; " id="Service">
+    <div class="container1">
+      <div class="box1" style="background-color: #0B0D12; width: 50%; height: 300px;  padding-left: 40px; padding-top: 40px;">
+        <i class="ph ph-paper-plane-tilt" style="color: skyblue;"></i>
+        <h1 style="font-size: 25px; padding-top: 5px;">konsep masa depan</h1>
+        <hr>
+        <p>
+          teknologi dan kreativitas <br> bersatu dlam perubahan 
+        </p>
+      </div>
+      <div class="box1" style="background-color: #0B0D12; width: 50%; height: 300px;  padding-left: 40px; padding-top: 40px; border: 2px solid skyblue; /* Ketebalan 2px, jenis solid, warna #333 */">
+        <i class="ph ph-brain" style="color: skyblue;"></i>
+        <h1 style="font-size: 25px; padding-top: 5px;">ide-ide besar</h1>
+        <hr>
+        <p>mengubah paradigma dengan ide besar <br> berani bermimpi untuk membangun <br> masa depan yang berkelanjutan</p>
+      </div>
+      <div class="box1" style="background-color: #0B0D12; width: 50%; height: 300px;  padding-left: 40px; padding-top: 40px;">
+        <i class="ph ph-lightbulb-filament" style="color: skyblue;"></i>
+        <h1 style="font-size: 25px; padding-top: 5px;">solusi kreatif</h1>
+        <hr>
+        <p>Kami menyajikan solusi teknologi inovatif dan kreativitas <br> dalam penyelesaian masalah, untuk memberikan nilai tambah kepada klien kami</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="container-fluid_container2" id="works">
+    <h1>services.</h1>
+    <p style="padding-bottom: 6px;">service bagi para klien</p>
+
+    <div class="flex-container">
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-chart-line-up" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">Strategi Digital</p>
+        <p style="font-size: 14px;"> Rencana terukur yang memanfaatkan teknologi online untuk mencapai tujuan bisnis secara efektif.</p>
+      </div>
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-pencil" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">ui ux design</p>
+        <p style="font-size: 14px;">Desain pengalaman pengguna yang intuitif dan antarmuka yang menarik, memastikan interaksi yang memuaskan dengan produk digital Anda.</p>
+      </div>
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-users" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">Data Analisis</p> 
+        <p>Pemahaman yang mendalam dari data untuk mendukung keputusan yang tepat dan strategi yang efektif.</p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-game-controller" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">game developer</p>
+        <p>Menghasilkan pengalaman bermain yang memikat dan inovatif untuk memenuhi kebutuhan pasar game yang dinamis.</p>
+      </div>
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-link" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">pengembang blockchain</p>
+        <p>Inovasi teknologi yang membangun solusi terdesentralisasi untuk kebutuhan bisnis yang kompleks.</p>
+      </div>
+      <div class="flex-box pt-5">
+        <i class="ph-fill ph-shield-checkered" style="color: skyblue;"></i>
+        <p class="pt-3" style="font-size: 20px; font-weight: 500;">cyber security</p>
+        <p>Proteksi yang andal dan proaktif terhadap ancaman digital untuk melindungi data dan sistem Anda.
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid_container3">
+    <h1>works</h1>
+    <p>hal-hal yang telah kami buat</p>
+
+    <div class="container">
+
+      <div class="slide" style="background-image:url(asset/Lab_®\ -\ UI\ UX\ Design.jpg)">
+          <h3>ui ux</h3>
+      </div>
+
+      <div class="slide" style="background-image: url(asset/Portfolio\ Web\ design\ _\ Dark\ version.jpg);">
+          <h3>web</h3>
+      </div>
+
+      <div class="slide" style="background-image: url(asset/Game\ App\ &\ Gaming\ Store.jpg);">
+          <h3>game</h3>
+      </div>
+
+      <div class="slide" style="background-image: url(asset/download.jpg);">
+          <h3>cyber security</h3>
+      </div>
+
+      <div class="slide" style="background-image: url(asset/Development\,\ Data\ Science\ &\ Engineering\ Solutions\ 🚀💼.jpg);">
+          <h3>data Analisis</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid_container4" style="background-color: #0B0D12;" id="About">
+    <h1>tentang </h1>
+    <p>kami lebih dari sekadar agensi digital</p>
+
+    <div class="image-grid">
+      <img class="image-grid-col-2 image-grid-row-2" src="asset/Предприниматели обсуждают результаты работы на встрече _ Бесплатно Фото.jpg" alt="">
+      <img src="asset/Free Photo _ Bussiness people working in team in an office.jpg" alt="">
+      <img src="asset/Группа людей разрабатывает бизнес-план в офисе _ Бесплатно Фото.jpg" alt="">
+    </div>
+
+    <div class="container mt-5" style="display: flex;">
+      <div class="text1">
+        <h1 style="font-size: 25px;">siapa kita</h1>
+        <p>Digital agency yang inovatif dan creative</p>
+      </div>
+
+      <div class="vertical-line"></div>
+
+      <div class="text1">
+        <h1 style="font-size: 25px;">filosofi kami</h1>
+        <p>novasi teknologi dengan fokus pada kebutuhan dan kemajuan klien.</p>
+      </div>
+
+      <div class="vertical-line"></div>
+
+
+      <div class="text1">
+        <h1 style="font-size: 25px;">Bagaimana kami bekerja</h1>
+        <p style="font-size: 15;">Kolaboratif, kreatif, dan terfokus pada solusi untuk mencapai tujuan klien dengan efisiensi tinggi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid_container5" style="padding: 100px; /* Atur padding sesuai kebutuhan Anda */ background-color: black; color: #ffffff;">
+    <h1>Testimonial.</h1>
+    <p>we are more than digital agency</p>
+    <div class="testimonials-section">
+    
+      <!-- Owl Carousel Slider Starts -->
+      <div class="owl-carousel owl-theme testimonials-container">
+        <!-- Item1 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>ali</h2> -->
+              </div>
+              <p>"Digital agency ini sangat responsif terhadap kebutuhan kami. Mereka memberikan solusi yang inovatif dan memastikan proyek kami berjalan lancar dari awal hingga akhir."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image1.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>Aline</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item1 Ends -->
+    
+          <!-- Item2 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>"Pengalaman bekerja dengan tim digital agency ini sangat memuaskan. Mereka memiliki pemahaman yang mendalam tentang teknologi terkini dan memberikan saran yang berharga untuk meningkatkan pengalaman pengguna produk kami."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image2.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>Grace</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item2 Ends -->
+    
+          <!-- Item3 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>"Kami sangat terkesan dengan kreativitas tim digital agency ini. Mereka berhasil menghadirkan desain yang menawan dan fungsional, menjadikan produk kami lebih menarik bagi pengguna."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image3.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>aleex</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item3 Ends -->
+    
+          <!-- Item4 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>"Digital agency ini tidak hanya memberikan solusi teknologi yang canggih, tetapi juga memberikan dukungan yang luar biasa setelah peluncuran produk. Mereka responsif terhadap pertanyaan dan masukan kami."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image4.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>Naoumi</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item4 Ends -->
+    
+          <!-- Item5 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>"Kami merekomendasikan digital agency ini kepada siapa pun yang mencari solusi teknologi berkualitas tinggi. Mereka telah membantu kami mencapai tujuan bisnis kami dengan cepat dan efisien."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image5.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>Agnes</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item5 Ends -->
+    
+          <!-- Item6 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>"Digital agency ini benar-benar memahami visi dan misi bisnis kami. Mereka tidak hanya memberikan solusi teknologi yang canggih, tetapi juga mengintegrasikan nilai-nilai perusahaan kami ke dalam setiap aspek proyek. Kami sangat terkesan dengan dedikasi mereka terhadap kesuksesan kami."</p>
+              <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </main>
+            <div class="profile">
+              <div class="profile-image">
+                <img src="asset/image6.jpg">
+              </div>
+              <div class="profile-desc">
+                <span>bob</span>
+                <span>CEO</span>
+              </div>
+            </div>
+          </div>
+          <!-- Item6 Ends -->
+    
+        </div>
+      <!-- Owl Carousel Slider Ends -->
+    
+    </div>
+    
+  </div>
+
+  <div class="container-fluid_container6" style="padding: 100px; /* Atur padding sesuai kebutuhan Anda */ background-color: #0B0D12; color: #ffffff;" id="Blog">
+    <h1>blog/news</h1>
+    <div class="blog-heading">
+
+      <div class="blog-container">
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="asset/banner-16.jpg" alt="">
+          </div>
+
+          <div class="blog-text">
+            <!-- <span style="color: #000000;">18 july 2024 / web design</span> -->
+            <a href="" style="text-decoration: none;">mungkinkah alat sketsa vr ini akan menjadi dewasa bagi para desainer di masa depan</a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="asset/WI1015_cover.jpg" alt="">
+          </div>
+
+          <div class="blog-text">
+            <!-- <span style="color: #000000;">18 july 2024 / web design</span> -->
+            <a href="" style="text-decoration: none;">8 kota yang menunjukkan seperti apa masa depan (ide inovatif)</a>
+          </div>
+        </div>
+
+        <!-- <div class="blog-box">
+          <div class="blog-img">
+            <img src="asset/manuel-cosentino-M3fhZSBFoFQ-unsplash-e1613656498145.jpg" alt="">
+          </div>
+
+          <div class="blog-text">
+            <a href="" style="text-decoration: none;">15 ide hadiah untuk ibu dan ayah dimanapun mereka berada tahun ini</a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="asset/image6.jpg" alt="">
+          </div>
+
+          <div class="blog-text">
+            <a href="" style="text-decoration: none;">15 ide hadiah untuk ibu dan ayah dimanapun mereka berada tahun ini</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer d-flex">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph ph-twitter-logo"></i></i></a>
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <span class="fw-bold text-light"><img src="asset/Untitled design.png" width="30%"> Acourdious Agency</span>
+    </div>
+ </footer>
+
+
+  
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    <!--   *****   Owl Carousel js Link  *****  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    activeslideimg();
+
+    function activeslideimg(activeSlide = 2) {
+        const slides = document.querySelectorAll(".slide");
+
+        slides[activeSlide].classList.add("active");
+
+        for (const slide of slides) {
+            slide.addEventListener("click", () => {
+                clearActiveClasses();
+
+                slide.classList.add("active");
+            });
+        }
+
+
+        function clearActiveClasses() {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            })
+        }
+
+
+    }
+
+    // This is script file
+
+$('.testimonials-container').owlCarousel({
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:6000,
+    margin:10,
+    nav:true,
+    // navText:["<i class='fa-solid fa-arrow-left'></i>",
+    //          "<i class='fa-solid fa-arrow-right'></i>"],
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:1,
+            nav:true
+        },
+        768:{
+            items:2
+        },
+    }
+})
+
+let valueDisplays = document.querySelectorAll(".num");
+let interval = 4000;
+
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue +=1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
+
+
+</script>
+
+
+</body>
+</html>

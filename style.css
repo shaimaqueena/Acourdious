@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  color: #000000; /* Warna teks */
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: skyblue; /* Warna teks saat dihover */
+}
+
+.navbar-brand {
+  font-weight: bold; /* Membuat teks judul tebal */
+  transition: transform 0.5s ease; /* Efek animasi naik */
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  font-weight: bold; /* Membuat teks tebal */
+}
+
+/* Efek animasi naik saat hover */
+.navbar-nav .nav-item:hover .nav-link {
+  transform: translateY(-5px); /* Naik 5 piksel saat hover */
+}
+
+/* Menetapkan gambar latar belakang untuk container */
+.container-bg {
+  background-image: url('asset/background1.png'); /* Ganti path dengan path file gambar container Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff; /* Warna teks pada gambar latar belakang container */
+  padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+}
+
+.container-bg p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: skyblue;
+}
+
+.container-bg span {
+  color: skyblue;
+}
+
+.container-bg h1 {
+  font-weight: 700;
+}
+
+.container-bg .text p {
+  font-size: 15px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: normal;
+  padding-top: 7px;
+}
+
+hr {
+  height: 4px; /* Mengatur tinggi garis */
+  background-color: skyblue; /* Mengatur warna garis */
+  border: none; /* Menghapus border garis (opsional) */
+  width: 100px;
+}
+
+.container-bawah-hr {
+  padding: 100px; /* Atur padding sesuai kebutuhan Anda */
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.container-bawah-hr h1 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.container-bawah-hr span {
+  font-weight: bold;
+  color: skyblue;
+}
+
+.container-bawah-hr strong {
+  color: skyblue;
+}
+
+.container-bawah-hr ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.container-bawah-hr .sunjudul1 {
+  display: flex;
+  color: #fff;
+}
+
+.container-bawah-hr .subjudul1 i {
+  font-size: 55px;
+  color: #fff;
+  margin-right: 10px;
+}
